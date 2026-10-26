@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kazi Kwa Vijana SACCO</title>
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f1f6f2;color:#203329}
+header{background:#075b3b;color:white;text-align:center;padding:28px 15px}
+header h1{margin:0 0 10px}
+nav{background:#06452e;padding:15px;text-align:center}
+nav a{color:white;text-decoration:none;margin:0 10px}
+main{max-width:850px;margin:25px auto;padding:0 15px}
+.card{background:white;padding:22px;margin-bottom:20px;border-radius:12px;box-shadow:0 3px 12px #00000010}
+h2{color:#075b3b}
+button{background:#087849;color:white;border:0;padding:12px 16px;border-radius:6px;cursor:pointer;margin:5px 3px}
+button:hover{background:#06452e}
+input{width:100%;padding:12px;margin:8px 0 16px;border:1px solid #bbb;border-radius:6px}
+.question{padding:14px 0;border-bottom:1px solid #ddd}
+.question label{display:block;margin-bottom:8px;font-weight:bold}
+.question input{margin:0}
+.price{font-size:26px;font-weight:bold;color:#075b3b}
+.muted{font-size:14px;color:#59665e;line-height:1.6}
+.status{padding:12px;background:#edf5ef;border-radius:7px;line-height:1.6}
+.hidden{display:none}
+footer{text-align:center;background:#06452e;color:white;padding:22px}
+</style>
+</head>
+
+<body>
+<header>
+<h1>Kazi Kwa Vijana SACCO</h1>
+<p>Surveys, referrals and member rewards</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#register">Register</a>
+<a href="#surveys">Surveys</a>
+<a href="#referrals">Referrals</a>
+<a href="#withdrawals">Withdrawals</a>
+</nav>
+
+<main>
+<section class="card" id="home">
+<h2>Welcome!</h2>
+<p>Join Kazi Kwa Vijana SACCO and explore our survey and referral programme.</p>
+<p class="price">Free registration</p>
+<p class="muted">Survey and referral rewards shown here are proposed amounts, not guaranteed payments. Eligibility, funding and payment terms must be verified before launch.</p>
+</section>
+
+<section class="card" id="register">
+<h2>Member Registration</h2>
+<form id="registerForm">
+<label for="fullName">Full name</label>
+<input id="fullName" required maxlength="100" placeholder="Enter your name">
+
+<label for="email">Email address</label>
+<input id="email" type="email" required maxlength="254" placeholder="Enter your email">
+
+<label for="referralCode">Referral code (optional)</label>
+<input id="referralCode" maxlength="100" placeholder="Referral code">
+
+<button type="submit">Create Demo Profile</button>
+</form>
+<p id="registerMessage" class="status" aria-live="polite">This demo does not create a real online account.</p>
+</section>
+
+<section class="card" id="surveys">
+<h2>Survey Centre</h2>
+<p><strong>First survey:</strong> 10 questions</p>
+<p><strong>Proposed reward:</strong> KSh 100 after eligibility checks.</p>
+<p class="muted">Answer honestly. This local demo does not send answers to a research organisation or issue money.</p>
+
+<form id="firstSurvey">
+<div id="firstQuestions"></div>
+<button type="submit">Submit First Survey</button>
+</form>
+<p id="firstMessage" class="status" aria-live="polite">Complete all 10 questions to test the demo.</p>
+
+<hr>
+
+<h2>Additional Surveys</h2>
+<p>18 additional questions. Proposed reward: KSh 20 per eligible completed question, subject to published terms.</p>
+<p class="muted">The proposed KSh 20 unlock payment is not collected by this demo. A real paid unlock must disclose its terms and be securely integrated before launch.</p>
+<button type="button" id="unlockButton">Preview Additional Questions — Demo</button>
+
+<form id="extraSurvey" class="hidden">
+<div id="extraQuestions"></div>
+<button type="submit">Submit Additional Survey</button>
+</form>
+<p id="extraMessage" class="status" aria-live="polite">Additional questions are locked until you choose to preview them.</p>
+</section>
+
+<section class="card" id="referrals">
+<h2>Invite a Friend</h2>
+<p>Proposed referral reward: KSh 100 for each eligible new member.</p>
+<p class="muted">A referral only counts after the server verifies a genuine new registration. This demo cannot verify registrations or award real rewards.</p>
+<button type="button" id="makeLink">Generate Demo Referral Link</button>
+<input id="shareLink" readonly placeholder="Your demo referral link will appear here">
+<button type="button" id="copyLink">Copy Link</button>
+<p id="referralMessage" aria-live="polite"></p>
+</section>
+
+<section class="card" id="dashboard">
+<h2>Demo Member Dashboard</h2>
+<p>Survey reward estimate: <strong id="surveyTotal">KSh 0</strong></p>
+<p>Referral reward estimate: <strong id="referralTotal">KSh 0</strong></p>
+<p class="muted">These are illustrative estimates only, not verified earnings or a payable balance. No real money is stored or credited.</p>
+</section>
+
+<section class="card" id="withdrawals">
+<h2>Withdrawals and Payment Status</h2>
+<p><strong>Minimum withdrawal:</strong> KSh 2,900 proposed, not yet enabled.</p>
+<p><strong>Withdrawal fee:</strong> Not configured. No KSh 50 fee is collected by this demo.</p>
+<p class="status">No verified withdrawal transactions are connected to this demo. No payout notifications are displayed because no genuine transaction feed is configured.</p>
+<p class="muted">Before enabling withdrawals, connect a legitimate payment provider, verify available funds, publish the rules and fees, and display only server-verified transactions.</p>
+</section>
+
+<section class="card" id="contact">
+<h2>Contact Us</h2>
+<p>Email: <a href="mailto:kazikwavijana@gmail.com">kazikwavijana@gmail.com</a></p>
+</section>
+</main>
+
+<footer>
+<p>&copy; 2026 Kazi Kwa Vijana SACCO</p>
+<p>Demo website — rewards and payments are not yet active.</p>
+</footer>
+
+<script>
+const firstForm = document.getElementById("firstSurvey");
+const extraForm = document.getElementById("extraSurvey");
+const firstContainer = document.getElementById("firstQuestions");
+const extraContainer = document.getElementById("extraQuestions");
+
+const firstPrompts = [
+"What is your age group?",
+"What county do you live in?",
+"What is your preferred language?",
+"What type of work or study do you do?",
+"How often do you use the internet?",
+"Which device do you usually use online?",
+"How often do you shop for household items?",
+"What topics interest you most?",
+"How do you usually learn about new products?",
+"What improvements would you like to see in online surveys?"
+];
+
+const extraPrompts = [
+"What is your preferred way to receive survey invitations?",
+"How often would you like to receive surveys?",
+"What time of day is convenient for you?",
+"Which survey topics do you prefer?",
+"How easy is it to complete online forms?",
+"What makes a survey easy to understand?",
+"Do you prefer short or long surveys?",
+"How do you usually access the internet?",
+"What type of educational content interests you?",
+"Which digital skills would you like to learn?",
+"What makes a website easy to navigate?",
+"How important is mobile-friendly design?",
+"What helps you decide whether a website is trustworthy?",
+"Which customer service method do you prefer?",
+"How often do you use email?",
+"What would improve your online experience?",
+"What advice would you give a new website owner?",
+"Do you have any other feedback?"
+];
+
+function addQuestions(container, prompts, prefix) {
+  prompts.forEach((prompt, index) => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "question";
+
+    const label = document.createElement("label");
+    label.htmlFor = prefix + index;
+    label.textContent = (index + 1) + ". " + prompt;
+
+    const input = document.createElement("input");
+    input.id = prefix + index;
+    input.name = prefix + index;
+    input.type = "text";
+    input.maxLength = 500;
+    input.required = true;
+    input.placeholder = "Your answer";
+
+    wrapper.append(label, input);
+    container.appendChild(wrapper);
+  });
+}
+
+addQuestions(firstContainer, firstPrompts, "first");
+addQuestions(extraContainer, extraPrompts, "extra");
+
+document.getElementById("registerForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  document.getElementById("registerMessage").textContent =
+    "Demo profile form completed. No real account was created. Secure online registration is not connected yet.";
+});
+
+firstForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  document.getElementById("firstMessage").textContent =
+    "Demo survey completed. Proposed reward: KSh 100, subject to eligibility and verification. No money was credited.";
+  document.getElementById("surveyTotal").textContent = "KSh 100 (estimate only)";
+});
+
+document.getElementById("unlockButton").addEventListener("click", function() {
+  extraForm.classList.remove("hidden");
+  document.getElementById("extraMessage").textContent =
+    "Additional questions opened for demo preview. No KSh 20 payment was taken.";
+});
+
+extraForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  document.getElementById("extraMessage").textContent =
+    "Demo survey completed. Rewards are estimates only; no payment was issued.";
+});
+
+document.getElementById("makeLink").addEventListener("click", function() {
+  const code = "KKV-" + Math.random().toString(36).slice(2, 8).toUpperCase();
+  const link = new URL(window.location.href);
+  link.searchParams.set("ref", code);
+  document.getElementById("shareLink").value = link.href;
+  document.getElementById("referralMessage").textContent =
+    "Demo link created. It does not yet track real registrations or award rewards.";
+});
+
+document.getElementById("copyLink").addEventListener("click", async function() {
+  const field = document.getElementById("shareLink");
+  const message = document.getElementById("referralMessage");
+
+  if (!field.value) {
+    message.textContent = "Generate a demo referral link first.";
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(field.value);
+    message.textContent = "Demo referral link copied.";
+  } catch (error) {
+    field.select();
+    message.textContent = "Press Ctrl+C to copy the selected demo link.";
+  }
+});
+
+const referralFromUrl = new URLSearchParams(window.location.search).get("ref");
+if (referralFromUrl) {
+  document.getElementById("referralCode").value = referralFromUrl;
+}
+</script>
+</body>
+</html>
